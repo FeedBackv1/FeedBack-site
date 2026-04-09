@@ -1,22 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedbex – Instagram Auto-Responder for Restaurants</title>
+</head>
+<body>
+
 <h1>Feedbex</h1>
-<p>Instagram Business Auto-Responder</p>
+<p>Instagram Business Auto-Responder for Restaurants</p>
 
 <h2>What is Feedbex?</h2>
 <p>
 Feedbex is a tool that helps restaurants automatically respond to customer messages on Instagram.
+Once connected, the system reads incoming DMs, generates relevant replies based on the restaurant's
+information (hours, menu, location), and sends them via the Instagram API.
+If a message requires human attention, it is forwarded to the business owner.
 </p>
 
 <h2>How it works</h2>
 <ul>
-  <li>The business connects its Instagram account using Instagram Login</li>
-  <li>Incoming messages are received via the Instagram API</li>
-  <li>The system generates automatic replies based on business information</li>
-  <li>Complex messages are forwarded to the business owner</li>
+  <li>The restaurant owner connects their Instagram Business account using Instagram Login</li>
+  <li>Incoming customer messages are received via the Instagram Messaging API</li>
+  <li>The system generates automatic replies based on the restaurant's data</li>
+  <li>Complex or sensitive messages are forwarded to the business owner</li>
 </ul>
+
+<h2>Connect your Instagram account</h2>
+<p>Restaurant owners can connect their Instagram Business account to Feedbex using the button below.</p>
+<a href="https://www.instagram.com/oauth/authorize?client_id=1939366423597260&redirect_uri=https://idanschnap.app.n8n.cloud/webhook/ig-oauth-callback&response_type=code&scope=instagram_business_basic,instagram_business_manage_messages&state=reviewer_test">
+  Connect Instagram Account
+</a>
 
 <h2>Data usage</h2>
 <p>
-Feedbex only accesses messages and basic profile information after user authorization.
+Feedbex only accesses messages and basic profile information after explicit user authorization.
 No data is sold or used for advertising.
 </p>
 
@@ -24,6 +41,9 @@ No data is sold or used for advertising.
 <p>Email: idanschnap@gmail.com</p>
 
 <p>
-<a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms of Service</a>
+  <a href="privacy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms of Service</a>
 </p>
+
+</body>
+</html>
