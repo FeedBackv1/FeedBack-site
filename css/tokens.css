@@ -1,0 +1,33 @@
+/* Design tokens — Feedbex (logo palette: charcoal + blue gradient) */
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-ink: #333333;
+  --color-ink-muted: #5c636a;
+  --color-border: #e2e8f0;
+  --color-border-accent: rgb(26 82 118 / 0.18);
+  /* Brand blues (speech bubble gradient) */
+  --color-blue-bright: #3498db;
+  --color-blue-deep: #1a5276;
+  --color-accent: #2e86c1;
+  --color-accent-hover: #1a5276;
+  --color-accent-subtle: #e8f4fc;
+  --gradient-primary: linear-gradient(145deg, var(--color-blue-bright) 0%, var(--color-blue-deep) 100%);
+  --gradient-primary-hover: linear-gradient(145deg, #2e86c1 0%, #154360 100%);
+  --shadow-sm: 0 1px 2px rgb(26 82 118 / 0.07);
+  --shadow-md: 0 8px 24px rgb(26 82 118 / 0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --max-width: 72rem;
+  /* Approximate sticky header height for layout math (logo + border, no extra padding) */
+  --header-h: 5.625rem;
+}

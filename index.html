@@ -2,48 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Feedbex – Instagram Auto-Responder for Restaurants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Feedbex: Instagram Business Login and Messaging API for restaurant DM replies. Privacy Policy and connection for Meta app review.">
+  <title>Feedbex – Instagram Business messaging</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<h1>Feedbex</h1>
-<p>Instagram Business Auto-Responder for Restaurants</p>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html">
+          <img class="site-logo__img" src="assets/feedbex_logo.png" width="440" height="110" alt="Feedbex">
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<h2>What is Feedbex?</h2>
-<p>
-Feedbex is a tool that helps restaurants automatically respond to customer messages on Instagram.
-Once connected, the system reads incoming DMs, generates relevant replies based on the restaurant's
-information (hours, menu, location), and sends them via the Instagram API.
-If a message requires human attention, it is forwarded to the business owner.
-</p>
+  <main id="main" class="page-main">
+    <div class="container review">
+      <h1 class="review__title">Feedbex</h1>
+      <p class="review__tagline">Instagram Business messaging helper for restaurants.</p>
 
-<h2>How it works</h2>
-<ul>
-  <li>The restaurant owner connects their Instagram Business account using Instagram Login</li>
-  <li>Incoming customer messages are received via the Instagram Messaging API</li>
-  <li>The system generates automatic replies based on the restaurant's data</li>
-  <li>Complex or sensitive messages are forwarded to the business owner</li>
-</ul>
+      <div class="review__body">
+        <p>
+          Feedbex lets a restaurant connect an Instagram Business account with <strong>Instagram Login</strong>,
+          then uses the <strong>Instagram Messaging API</strong> to receive customer DMs and send automated replies
+          based on information the business provides (for example hours, menu, and location).
+        </p>
+        <p>
+          Messages that need a human response are forwarded to the business owner instead of being answered automatically.
+          Access can be revoked anytime in Instagram settings.
+        </p>
+      </div>
 
-<h2>Connect your Instagram account</h2>
-<p>Restaurant owners can connect their Instagram Business account to Feedbex using the button below.</p>
-<a href="https://www.instagram.com/oauth/authorize?force_reauth=true&client_id=923513216873822&redirect_uri=https://idanschnap.app.n8n.cloud/webhook/ig-oauth-callback&response_type=code&scope=instagram_business_basic%2Cinstagram_business_manage_messages&state=reviewer_test">
-  Connect Instagram Account
-</a>
+      <h2 class="review__heading">What we access</h2>
+      <ul class="review__list">
+        <li>Instagram Business account ID and basic profile information, after you authorize the app.</li>
+        <li>Direct messages sent to your business on Instagram, to generate and send replies.</li>
+        <li>We do not sell your data or use it for advertising. See our <a href="privacy.html">Privacy Policy</a> for full details.</li>
+      </ul>
 
-<h2>Data usage</h2>
-<p>
-Feedbex only accesses messages and basic profile information after explicit user authorization.
-No data is sold or used for advertising.
-</p>
+      <div class="review__actions">
+        <a class="btn btn--primary" href="https://www.instagram.com/oauth/authorize?force_reauth=true&client_id=923513216873822&redirect_uri=https://idanschnap.app.n8n.cloud/webhook/ig-oauth-callback&response_type=code&scope=instagram_business_basic%2Cinstagram_business_manage_messages&state=reviewer_test">Connect Instagram account</a>
+      </div>
 
-<h2>Contact</h2>
-<p>Email: idanschnap@gmail.com</p>
+      <p class="review__contact">Questions or data requests: <a href="mailto:idanschnap@gmail.com">idanschnap@gmail.com</a></p>
+    </div>
+  </main>
 
-<p>
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms of Service</a>
-</p>
-
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="site-footer__brand" href="index.html">Feedbex</a>
+      <div class="site-footer__links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:idanschnap@gmail.com">Email</a>
+      </div>
+      <p class="site-footer__copy">© Feedbex</p>
+    </div>
+  </footer>
 </body>
 </html>
