@@ -6,22 +6,26 @@
   background: rgb(255 255 255 / 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
+  /* Bar height follows the logo only — no extra line-box space */
+  line-height: 0;
 }
 
 .site-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-md);
-  padding-block: 0;
+  gap: var(--space-sm);
+  padding: 0;
+  margin: 0;
+  line-height: 0;
 }
 
 .site-logo {
-  display: flex;
-  align-items: center;
+  display: block;
   line-height: 0;
   text-decoration: none;
   border-radius: var(--radius-sm);
+  flex-shrink: 0;
 }
 
 .site-logo:focus-visible {
@@ -30,9 +34,10 @@
 
 .site-logo__img {
   display: block;
-  height: 5.5rem;
+  height: 6rem;
   width: auto;
-  max-width: min(480px, 92vw);
+  max-width: min(520px, 78vw);
+  max-height: none;
   object-fit: contain;
 }
 
@@ -43,16 +48,21 @@
 .site-nav {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-md) var(--space-lg);
+  flex-wrap: nowrap;
+  gap: var(--space-sm) var(--space-md);
   justify-content: flex-end;
+  flex-shrink: 0;
+  line-height: 1.2;
 }
 
 .site-nav a {
   color: var(--color-ink-muted);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  padding: 0;
 }
 
 .site-nav a:hover {

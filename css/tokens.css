@@ -28,6 +28,6 @@
   --space-2xl: 3rem;
   --space-3xl: 4.5rem;
   --max-width: 72rem;
-  /* Approximate sticky header height for layout math (logo + border, no extra padding) */
-  --header-h: 5.625rem;
+  /* Sticky header: logo height + 1px border (no vertical padding) */
+  --header-h: calc(6rem + 1px);
 }

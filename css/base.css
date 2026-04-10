@@ -24,9 +24,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img {
+/* Exclude header logo — global height:auto would fight fixed logo height */
+img:not(.site-logo__img) {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+.site-logo__img {
   display: block;
 }
 
