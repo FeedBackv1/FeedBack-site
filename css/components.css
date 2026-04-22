@@ -331,6 +331,46 @@
   margin-bottom: var(--space-xs);
 }
 
+.lp-how-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.lp-how-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  padding: var(--space-xs) var(--space-sm);
+  text-align: center;
+}
+
+.lp-how-step {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--color-ink-muted);
+  line-height: 1.5;
+}
+
+.lp-how-step--highlight {
+  border-color: var(--color-border-accent);
+}
+
+@media (max-width: 640px) {
+  .lp-how-grid { grid-template-columns: 1fr; }
+}
+
+.lp-steps--inline {
+  grid-template-columns: 1fr;
+  margin-top: var(--space-md);
+  max-width: none;
+}
+
 .lp-trust {
   text-align: center;
   font-size: 0.875rem;
