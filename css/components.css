@@ -232,3 +232,108 @@
   font-size: 0.8125rem;
   color: var(--color-ink-muted);
 }
+
+/* ── Landing page sections ───────────────────────────────── */
+.lp-hero {
+  padding: var(--space-3xl) 0 var(--space-xl);
+  text-align: center;
+}
+
+.lp-hero__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.lp-hero__tagline {
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.lp-section {
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.lp-section__title {
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.lp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .lp-grid { grid-template-columns: 1fr; }
+}
+
+.lp-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.lp-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.lp-card p {
+  font-size: 0.9375rem;
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lp-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  max-width: 52rem;
+}
+
+@media (max-width: 640px) {
+  .lp-steps { grid-template-columns: 1fr 1fr; }
+}
+
+.lp-steps li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--color-ink-muted);
+  line-height: 1.5;
+}
+
+.lp-steps__num {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.lp-trust {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-ink-muted);
+  padding: var(--space-lg) 0 var(--space-xs);
+}
