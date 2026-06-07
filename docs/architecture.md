@@ -2,11 +2,20 @@
 
 ## Deployment
 
-Static site hosted on GitHub Pages. No framework, no build step, no server.
+Static site hosted on GitHub Pages (`FeedBackv1/FeedBack-site` repo). No framework, no build step, no server.
 
 - **URL:** `https://feedbex.ai`
-- **Deploy:** git push to this repo → live immediately
 - **Custom domain:** `feedbex.ai` (registered on GoDaddy). CNAME file in repo root points GitHub Pages to this domain. GoDaddy DNS has 4 A records pointing to GitHub's servers and a `www` CNAME pointing to `feedbackv1.github.io`.
+
+### How to deploy (do NOT push to FeedBack-site directly)
+
+All edits happen in the **FeedBex repo** (`FeedBackv1/FeedBex`), inside the `FeedBack-site/` folder.
+When you push to FeedBex master, a GitHub Actions workflow (`.github/workflows/deploy-site.yml`) automatically copies this folder to the `FeedBack-site` repo → GitHub Pages deploys it live within seconds.
+
+**Deploy token:** A GitHub PAT named `DEPLOY_TOKEN` is stored in FeedBex repo → Settings → Secrets → Actions.
+- **Expires:** 2026-10-31
+- **Scope:** `repo`
+- **When it expires:** Generate a new token at GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic). Replace the secret value in FeedBex → Settings → Secrets → DEPLOY_TOKEN. Next time create with no expiration.
 
 ---
 
