@@ -7,7 +7,9 @@ Static site hosted on GitHub Pages (`FeedBackv1/FeedBack-site` repo). No framewo
 - **URL:** `https://feedbex.ai`
 - **Custom domain:** `feedbex.ai` (registered on GoDaddy). CNAME file in repo root points GitHub Pages to this domain. GoDaddy DNS has 4 A records pointing to GitHub's servers and a `www` CNAME pointing to `feedbackv1.github.io`.
 
-### How to deploy (do NOT push to FeedBack-site directly)
+### How to deploy
+
+> **NEVER push directly to the `FeedBackv1/FeedBack-site` repo.** Any direct push will be overwritten on the next deploy.
 
 All edits happen in the **FeedBex repo** (`FeedBackv1/FeedBex`), inside the `FeedBack-site/` folder.
 When you push to FeedBex master, a GitHub Actions workflow (`.github/workflows/deploy-site.yml`) automatically copies this folder to the `FeedBack-site` repo → GitHub Pages deploys it live within seconds.
