@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Settings — Feedbex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__img" src="assets/feedbex_logo.png" width="520" height="120" alt="Feedbex">
+      </a>
+      <span id="biz-name-header" style="font-size:0.85rem;color:var(--color-ink-muted);font-weight:500;"></span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="settings-main">
+
+    <div id="error-view" class="s-error" style="display:none;">
+      <p>This link is missing a business key. Please use the link sent to you by Feedbex.</p>
+      <p style="margin-top:0.5rem;"><a href="mailto:office@feedbex.ai">office@feedbex.ai</a></p>
+    </div>
+
+    <div id="settings-view" style="display:none;">
+
+      <h1 class="settings-page-title">Business Settings</h1>
+      <p class="settings-page-subtitle">Manage the information your AI assistant uses to answer customer messages.</p>
+
+      <!-- Instagram Connection Card -->
+      <div id="ig-card" class="s-card s-card--pending">
+        <div class="s-card__header">
+          <h2 class="s-card__title">Instagram Connection</h2>
+          <span id="ig-badge" class="status-badge status-badge--pending">⚠ Not connected yet</span>
+        </div>
+        <div class="s-card__body">
+          <div class="ig-row">
+            <p id="ig-message">Connect your Instagram Business account so your AI assistant can receive and reply to customer messages.</p>
+            <a id="ig-btn" href="#" class="btn--instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Connect Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Information Card -->
+      <div class="s-card">
+        <div class="s-card__header">
+          <h2 class="s-card__title">Business Information</h2>
+        </div>
+        <div class="s-card__body">
+          <form id="settings-form" class="s-form-grid" novalidate>
+
+            <p class="s-section-label">About your business</p>
+
+            <div class="s-field">
+              <label for="businessName">Business name <span class="hint">(used by the AI when talking to customers)</span></label>
+              <input type="text" id="businessName" name="businessName" placeholder="e.g. Bella Napoli">
+            </div>
+
+            <p class="s-section-label">Hours</p>
+
+            <div class="s-grid-2">
+              <div class="s-field"><label for="sun_hours">Sunday</label><input type="text" id="sun_hours" name="sun_hours" placeholder="e.g. 12:00 – 23:00"></div>
+              <div class="s-field"><label for="mon_hours">Monday</label><input type="text" id="mon_hours" name="mon_hours" placeholder="e.g. 12:00 – 23:00"></div>
+            </div>
+            <div class="s-grid-2">
+              <div class="s-field"><label for="tue_hours">Tuesday</label><input type="text" id="tue_hours" name="tue_hours" placeholder="e.g. 12:00 – 23:00"></div>
+              <div class="s-field"><label for="wed_hours">Wednesday</label><input type="text" id="wed_hours" name="wed_hours" placeholder="e.g. 12:00 – 23:00"></div>
+            </div>
+            <div class="s-grid-2">
+              <div class="s-field"><label for="thu_hours">Thursday</label><input type="text" id="thu_hours" name="thu_hours" placeholder="e.g. 12:00 – 23:00"></div>
+              <div class="s-field"><label for="fri_hours">Friday</label><input type="text" id="fri_hours" name="fri_hours" placeholder="e.g. 12:00 – 17:00"></div>
+            </div>
+            <div class="s-grid-2">
+              <div class="s-field"><label for="sat_hours">Saturday</label><input type="text" id="sat_hours" name="sat_hours" placeholder="e.g. Closed"></div>
+              <div class="s-field"><label for="kosherStatus">Kosher / Dietary</label><input type="text" id="kosherStatus" name="kosherStatus" placeholder="e.g. Kosher certified, Vegan-friendly"></div>
+            </div>
+
+            <p class="s-section-label">Additional info</p>
+
+            <div class="s-field">
+              <label for="currentSpecials">Current specials <span class="hint">(this week's promotions or dishes)</span></label>
+              <textarea id="currentSpecials" name="currentSpecials" placeholder="e.g. Weekend brunch deal – ₪59 including coffee. Happy hour 17:00–19:00 on weekdays."></textarea>
+            </div>
+
+            <div class="s-field">
+              <label for="extraInfo">Extra info <span class="hint">(anything else customers might ask about)</span></label>
+              <textarea id="extraInfo" name="extraInfo" placeholder="e.g. Parking available in the building next door. Reservations required on weekends."></textarea>
+            </div>
+
+            <p class="s-section-label">Notifications</p>
+
+            <div class="s-field">
+              <label for="whatsappNumber">WhatsApp number <span class="hint">(receives escalation alerts when AI can't answer)</span></label>
+              <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="e.g. +972 50-000-0000">
+            </div>
+
+            <div class="s-save-bar">
+              <div id="save-toast" class="s-toast"></div>
+              <button type="submit" class="btn btn--primary" id="save-btn">Save settings</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div><!-- /settings-view -->
+  </div>
+</main>
+
+<script>
+  const GET_WEBHOOK  = 'https://idanschnap.app.n8n.cloud/webhook/client-settings-read';
+  const POST_WEBHOOK = 'https://idanschnap.app.n8n.cloud/webhook/client-settings-save';
+  const IG_APP_ID    = '1939366423597260';
+  const IG_REDIRECT  = 'https://idanschnap.app.n8n.cloud/webhook/ig-oauth-callback';
+  const IG_SCOPES    = 'instagram_business_basic,instagram_business_manage_messages';
+
+  const FIELDS = [
+    'businessName',
+    'sun_hours', 'mon_hours', 'tue_hours', 'wed_hours',
+    'thu_hours', 'fri_hours', 'sat_hours',
+    'kosherStatus', 'currentSpecials', 'extraInfo', 'whatsappNumber'
+  ];
+
+  function el(id) { return document.getElementById(id); }
+
+  function showToast(msg, type) {
+    var t = el('save-toast');
+    t.textContent = msg;
+    t.className = 's-toast s-toast--' + type;
+    setTimeout(function() { t.className = 's-toast'; }, 4000);
+  }
+
+  function setConnectedUI() {
+    el('ig-card').className  = 's-card s-card--connected';
+    el('ig-badge').className = 'status-badge status-badge--connected';
+    el('ig-badge').textContent = '✓ Connected';
+    el('ig-message').textContent = 'Your Instagram Business account is connected and your assistant is active.';
+    el('ig-btn').textContent = 'Reconnect';
+    el('ig-btn').className   = 'btn--ghost';
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var key    = params.get('key');
+
+  if (!key) {
+    el('error-view').style.display = 'block';
+  } else {
+    el('settings-view').style.display = 'block';
+
+    var igOAuthURL = 'https://www.instagram.com/oauth/authorize'
+      + '?force_reauth=true'
+      + '&client_id=' + IG_APP_ID
+      + '&redirect_uri=' + encodeURIComponent(IG_REDIRECT)
+      + '&response_type=code'
+      + '&scope=' + IG_SCOPES
+      + '&state=' + encodeURIComponent(key);
+    el('ig-btn').href = igOAuthURL;
+
+    fetch(GET_WEBHOOK + '?key=' + encodeURIComponent(key))
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.found) {
+          FIELDS.forEach(function(f) {
+            var input = el(f);
+            if (input) input.value = data[f] || '';
+          });
+          if (data.businessName) {
+            el('biz-name-header').textContent = data.businessName;
+          }
+          if (data.isConnected) setConnectedUI();
+        }
+      })
+      .catch(function() {});
+
+    el('settings-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = el('save-btn');
+      btn.disabled = true;
+      btn.textContent = 'Saving…';
+
+      var body = { key: key };
+      FIELDS.forEach(function(f) {
+        var input = el(f);
+        body[f] = input ? input.value.trim() : '';
+      });
+
+      fetch(POST_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      })
+      .then(function(res) {
+        if (res.ok) {
+          showToast('Settings saved ✓', 'success');
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(function() {
+        showToast('Something went wrong — please try again.', 'error');
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = 'Save settings';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
