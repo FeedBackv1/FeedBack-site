@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Client Link — Feedbex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .card-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin: 0 0 0.25rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+      color: var(--color-ink);
+    }
+
+    .card-subtitle {
+      font-size: 0.875rem;
+      color: var(--color-ink-muted);
+      margin: 0 0 2rem;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--color-ink);
+    }
+
+    .field input {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--color-ink);
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .field input:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgb(46 134 193 / 0.12);
+    }
+
+    .result {
+      margin-top: 1.5rem;
+      background: #f3f4f6;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .result-url {
+      font-size: 0.875rem;
+      color: var(--color-accent);
+      word-break: break-all;
+      flex: 1;
+    }
+
+    .copy-btn {
+      flex-shrink: 0;
+      padding: 0.45rem 1rem;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.15s;
+    }
+
+    .copy-btn:hover { opacity: 0.88; }
+    .copy-btn.copied { background: #16a34a; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="card-logo">feedbex</p>
+    <h1 class="card-title">New client link</h1>
+    <p class="card-subtitle">Type the Instagram username to generate their settings link.</p>
+
+    <div class="field">
+      <label for="username">Instagram username</label>
+      <input type="text" id="username" placeholder="e.g. bella_napoli_tlv" autocomplete="off">
+    </div>
+
+    <div class="result" id="result" style="display:none;">
+      <span class="result-url" id="result-url"></span>
+      <button class="copy-btn" id="copy-btn" onclick="copyLink()">Copy</button>
+    </div>
+  </div>
+
+  <script>
+    var input = document.getElementById('username');
+    var result = document.getElementById('result');
+    var resultUrl = document.getElementById('result-url');
+
+    input.addEventListener('input', function() {
+      var val = input.value.trim();
+      if (val) {
+        resultUrl.textContent = 'https://feedbex.ai/settings?key=' + encodeURIComponent(val);
+        result.style.display = 'flex';
+      } else {
+        result.style.display = 'none';
+      }
+    });
+
+    function copyLink() {
+      navigator.clipboard.writeText(resultUrl.textContent).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
